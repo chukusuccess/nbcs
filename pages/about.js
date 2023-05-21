@@ -123,6 +123,29 @@ export default function About() {
                 <b className="text-3xl">↑</b>
               </button>
             </div>
+            <br />
+            <hr />
+            <br />
+            <h1 className="font-bold text-xl text-red-600 text-center mb-2">
+              DISCLAIMER
+            </h1>
+            <p>
+              This website is a personal project dedicated to the African
+              Brawlhalla Community. I am not officially affiliated with Blue
+              Mammoth Games and this website is not the official{" "}
+              <Link
+                className="text-blue-500 font-bold"
+                href="https://brawlhalla.com/"
+                target="_blank"
+              >
+                Brawlhalla Website.
+              </Link>
+              All Brawlhalla images rendered in this site are legitimate
+              properties of BMG
+            </p>
+            <i className="text-yellow-600 font-bold">
+              - Cifer (Community Moderator)
+            </i>
           </div>
           <Image
             src="https://www.brawlhalla.com/c/uploads/2015/11/legendlineupmarch.png"
