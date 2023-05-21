@@ -12,7 +12,7 @@ function SplashText() {
       }}
       className="flex flex-col items-center justify-center text-white"
     >
-      <Image src="/africa.png" width={100} height={100} />
+      <Image src="/africa.png" alt="brawlhalla" width={100} height={100} />
       <h1 className="xl:text-9xl 2xl:text-[160px] lg:text-8xl md:text-7xl text-[100px] font-semibold nbcs">
         NBCS
       </h1>

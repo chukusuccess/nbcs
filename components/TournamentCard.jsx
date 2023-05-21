@@ -14,7 +14,7 @@ export const TournamentCard = ({
 }) => {
   return (
     <div className="flex flex-row gap-2 items-center justify-start bg-[#111] rounded-xl mb-3 p-2">
-      <Image src={`${imageUrl}`} width={100} height={100} />
+      <Image src={`${imageUrl}`} alt="brawlhalla" width={100} height={100} />
       <div className="w-full flex flex-col gap-1">
         <h1>{title}</h1>
         <p>Host: {host}</p>

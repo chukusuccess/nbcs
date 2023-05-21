@@ -75,6 +75,7 @@ export default function Home() {
                 {members.map((item, index) => {
                   return (
                     <Popover
+                      key={index}
                       content={
                         <div className="flex flex-col">
                           <span>Peak ELO: {item.peak}</span>
