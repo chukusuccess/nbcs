@@ -217,8 +217,8 @@ export const members = [
   },
   {
     name: "HashtagOne",
-    peak: "1816",
-    rank: "Platinum",
+    peak: "2078",
+    rank: "Diamond",
     role: "Community Member",
   },
   {
