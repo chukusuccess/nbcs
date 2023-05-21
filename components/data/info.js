@@ -175,8 +175,8 @@ export const members = [
   },
   {
     name: "Abgwaggo",
-    peak: "2300",
-    rank: "Diamond",
+    peak: "2400",
+    rank: "Valhallan",
     role: "Community Member",
   },
   {

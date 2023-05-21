@@ -108,7 +108,13 @@ export default function Home() {
                           <span>
                             <b>Peak ELO:</b> {item.peak}
                           </span>
-                          <span className="flex items-center gap-2">
+                          <span
+                            className={`flex items-center gap-2 ${
+                              item.rank === "Valhallan"
+                                ? "text-indigo-500 font-bold"
+                                : ""
+                            }`}
+                          >
                             <b>Rank:</b>
                             {item.rank}
                           </span>
@@ -147,6 +153,14 @@ export default function Home() {
                               src="/gold.png"
                               alt="brawlhalla rank"
                               width={60}
+                              height={30}
+                              className="absolute right-2 top-2"
+                            />
+                          ) : item.rank === "Valhallan" ? (
+                            <Image
+                              src="/valhallan.webp"
+                              alt="brawlhalla rank"
+                              width={48}
                               height={30}
                               className="absolute right-2 top-2"
                             />
