@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { afrobrawlers } from "../components/data/info.js";
 
-export default function Home() {
+export default function May2023() {
   return (
     <>
       <Head>

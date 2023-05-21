@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { afrobrawlers } from "../components/data/info.js";
 
-export default function Home() {
+export default function August2021() {
   return (
     <>
       <Head>
@@ -33,7 +33,7 @@ export default function Home() {
             <div>
               <h1 className="font-bold text-xl text-green-600 mb-10">
                 WINNER:{" "}
-                <span className="text-white">{afrobrawlers[3].winner}</span>
+                <span className="text-white">{afrobrawlers[2].winner}</span>
               </h1>
               <div className="relative flex flex-col items-center justify-center">
                 <Image
@@ -55,7 +55,7 @@ export default function Home() {
               <div>
                 <h1 className="font-bold text-yellow-600">Participants:</h1>
                 <div className="flex flex-wrap">
-                  {afrobrawlers[3].participants.map((item, index) => {
+                  {afrobrawlers[2].participants.map((item, index) => {
                     return (
                       <p key={index} className="mr-2">
                         {item},
