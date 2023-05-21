@@ -32,18 +32,27 @@ export default function Home() {
               AfroBrawlers Community
             </h1>
             <p>
-              Engage in memorable 1v1s, hone your skill-set, and forge lasting
-              friendships with fellow fighters in our community.
+              Engage in memorable 1v1s, 2v2s, and Crew battles. Hone your
+              skill-set, and forge lasting friendships with fellow fighters in
+              our community.
             </p>
             <br />
             <br />
-            <Link
-              className="text-black w-1/2 sm:w-1/4 rounded-lg bg-white h-10 sm:h-20 flex flex-row items-center justify-center font-bold"
-              href={"https://chat.whatsapp.com/FYs8CKFKWf8FmLW1arVuRC"}
-              target="_blank"
-            >
-              Join Community
-            </Link>
+            <div className="w-full flex items-center justify-center gap-1">
+              <Link
+                className="text-black w-1/2 sm:w-1/4 rounded-lg bg-white h-10 sm:h-20 flex flex-row items-center justify-center font-bold"
+                href={"https://chat.whatsapp.com/FYs8CKFKWf8FmLW1arVuRC"}
+                target="_blank"
+              >
+                Join Community
+              </Link>
+              <Link
+                className="text-black w-1/2 sm:w-1/4 rounded-lg bg-white h-10 sm:h-20 flex flex-row items-center justify-center font-bold"
+                href="/about"
+              >
+                About Us
+              </Link>
+            </div>
             <br />
             <br />
             <div>
@@ -56,12 +65,10 @@ export default function Home() {
                       title={item.tournamentTitle}
                       host={item.Host}
                       type={item.Type}
-                      // date={item.Date}
-                      // time={item.Time}
-                      // status={item.Status}
-                      buttonText="View participants"
+                      buttonText="View details"
                       buttonColor="bg-yellow-600"
                       imageUrl={item.url}
+                      href={item.href}
                     />
                   );
                 })}
@@ -71,28 +78,73 @@ export default function Home() {
             <br />
             <div className="w-full">
               <h1 className="text-xl font-bold mb-5">Notable Members</h1>
-              <div className="w-full flex flex-row items-center gap-5 overflow-x-scroll">
+              <div className="w-full flex flex-row flex-wrap items-center gap-5">
                 {members.map((item, index) => {
                   return (
                     <Popover
+                      className="w-1/5"
                       key={index}
                       content={
                         <div className="flex flex-col">
-                          <span>Peak ELO: {item.peak}</span>
-                          <span>Rank: {item.rank}</span>
-                          <span>Role: {item.role}</span>
+                          <span>
+                            <b>Peak ELO:</b> {item.peak}
+                          </span>
+                          <span className="flex items-center gap-2">
+                            <b>Rank:</b>
+                            {item.rank}
+                          </span>
+                          <span
+                            className={`${
+                              item.role === "Community Moderator"
+                                ? "text-green-600"
+                                : "text-black"
+                            }`}
+                          >
+                            <b className="text-black">Role:</b> {item.role}
+                          </span>
                         </div>
                       }
-                      title={item.name}
+                      title={
+                        <div className="flex items-center justify-between gap-2">
+                          <h1 className="font-bold text-xl">{item.name}</h1>
+                          {item.rank === "Platinum" ? (
+                            <Image
+                              src="/plat.png"
+                              alt="brawlhalla rank"
+                              width={60}
+                              height={30}
+                              className="absolute right-2 top-2"
+                            />
+                          ) : item.rank === "Diamond" ? (
+                            <Image
+                              src="/diamond.png"
+                              alt="brawlhalla rank"
+                              width={50}
+                              height={30}
+                              className="absolute right-2 top-2"
+                            />
+                          ) : item.rank === "Gold" ? (
+                            <Image
+                              src="/gold.png"
+                              alt="brawlhalla rank"
+                              width={60}
+                              height={30}
+                              className="absolute right-2 top-2"
+                            />
+                          ) : (
+                            ""
+                          )}
+                        </div>
+                      }
                     >
                       <div className="flex flex-col items-center justify-center pb-3">
                         <div
                           key={index}
-                          className="rounded-full bg-slate-900 w-10 aspect-square flex items-center justify-center text-lg"
+                          className="rounded-full bg-slate-900 w-12 aspect-square flex items-center justify-center text-lg"
                         >
                           👤
                         </div>
-                        <span className="text-sm font-thin">{item.name}</span>
+                        <span className="text-xs">{item.name}</span>
                       </div>
                     </Popover>
                   );

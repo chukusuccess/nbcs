@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const TournamentCard = ({
@@ -11,6 +12,7 @@ export const TournamentCard = ({
   buttonText,
   buttonColor,
   imageUrl,
+  href,
 }) => {
   return (
     <div className="flex flex-row gap-2 items-center justify-start bg-[#111] rounded-xl mb-3 p-2">
@@ -22,9 +24,12 @@ export const TournamentCard = ({
         <p>{date}</p>
         <p>{time}</p>
         <p>{status}</p>
-        <button className={`${buttonColor} w-2/3 rounded-lg h-10`}>
+        <Link
+          href={href}
+          className={`${buttonColor} flex items-center justify-center w-2/3 rounded-lg h-10`}
+        >
           {buttonText}
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ export default function Home() {
                 href="/home"
                 className="flex flex-row items-center justify-center gap-2 p-2 w-64 border border-[#fff] bg-[#2a9988] hover:bg-[#1C665B] dark:bg-black dark:hover:bg-[#1C665B] duration-500 rounded-md text-white text-xl max-w-[250px] text-center"
               >
-                Get Started
+                Explore
                 <Image
                   alt="brawlhalla"
                   src="https://static.wikia.nocookie.net/brawlhalla_gamepedia/images/e/ea/Gadget_Bomb.png/revision/latest/scale-to-width-down/50?cb=20200528002842"
@@ -45,19 +45,7 @@ export default function Home() {
                   height={10}
                 />
               </Link>
-              {/* <Link
-                href="/history"
-                className="p-2 w-64 border border-[#2a9988] bg-[#2a9988] hover:bg-[#1C665B] dark:bg-black dark:hover:bg-[#1C665B] duration-500 rounded-md text-white text-xl max-w-[250px] text-center"
-              >
-                Get Started
-              </Link> */}
             </div>
-            {/* <Image
-              src="https://www.brawlhalla.com/c/uploads/2015/11/legendlineupmarch.png"
-              width={300}
-              height={100}
-              className="fixed bottom-10"
-            /> */}
           </div>
           <div className="fixed text-gray-300 bottom-1 left-2">
             Brought to you by: <b className="text-[#3a7e74]">Afrobrawlers</b>
