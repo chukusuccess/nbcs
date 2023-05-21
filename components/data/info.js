@@ -1,0 +1,98 @@
+export const afrobrawlers = [
+  {
+    tournamentTitle: "May 2023 Tournament",
+    Host: "Jerome",
+    Type: "3v3",
+    Date: "May 01, 2023",
+    Time: "9:00pm",
+    Status: "Over",
+    url: "https://www.brawlhalla.com/c/uploads/2022/02/GnashSplash.png",
+  },
+  {
+    tournamentTitle: "September 2022 Tournament",
+    Host: "Cifer",
+    Type: "1v1",
+    Date: "September 10, 2022",
+    Time: "9:00pm",
+    Status: "Cancelled",
+    url: "https://www.brawlhalla.com/c/uploads/2022/02/VraxxSplash.png",
+  },
+  {
+    tournamentTitle: "December 2021 Tournament",
+    Host: "Cifer",
+    Type: "2v2",
+    Date: "December 03, 2021",
+    Time: "9:00pm",
+    Status: "Cancelled",
+    url: "https://www.brawlhalla.com/c/uploads/2022/02/OrionSplash-1.png",
+  },
+  {
+    tournamentTitle: "August 2021 Tournament",
+    Host: "Cifer",
+    Type: "1v1",
+    Date: "August 03, 2021",
+    Time: "9:00pm",
+    Status: "Over",
+    url: "https://www.brawlhalla.com/c/uploads/2022/02/CassidySplash-1.png",
+  },
+  {
+    tournamentTitle: "May 2020 Tournament",
+    Host: "Cifer",
+    Type: "1v1",
+    Date: "May 10, 2020",
+    Time: "9:00pm",
+    Status: "Over",
+    url: "https://www.brawlhalla.com/c/uploads/2022/02/BodvarSplash-1.png",
+  },
+];
+
+export const members = [
+  {
+    name: "Cifer",
+    peak: "1700",
+    rank: "Platinum",
+    role: "Community Moderator",
+  },
+  {
+    name: "Jerome",
+    peak: "1700",
+    rank: "Platinum",
+    role: "Community Moderator",
+  },
+  {
+    name: "Chibz",
+    peak: "1800",
+    rank: "Platinum",
+    role: "Community Moderator",
+  },
+  {
+    name: "Dave",
+    peak: "1900",
+    rank: "Platinum",
+    role: "Community Moderator",
+  },
+  {
+    name: "Jesse",
+    peak: "1900",
+    rank: "Platinum",
+    role: "Community Moderator",
+  },
+  {
+    name: "Dixit",
+    peak: "2100",
+    rank: "Diamond",
+    role: "Community Member",
+  },
+  {
+    name: "Osei",
+    peak: "1800",
+    rank: "Platinum",
+    role: "Community Member",
+  },
+  {
+    name: "Felix",
+    peak: "1700",
+    rank: "Platinum",
+    role: "Community Member",
+  },
+];
