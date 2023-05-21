@@ -17,12 +17,14 @@ export default function August2021() {
       </Head>
       <main>
         <section className="flex flex-col items-center justify-start bg-black text-white text:lg sm:text-3xl w-full min-h-screen gap-5 px-5 py-8">
-          <h1 className="font-bold text-2xl text-white">1v1 Round Robin</h1>
+          <h1 className="font-bold text-2xl sm:text-3xl text-white">
+            1v1 Round Robin
+          </h1>
           <div>
-            <h1 className="font-bold text-xl text-yellow-600">
+            <h1 className="font-bold text-xl sm:text-2xl text-yellow-600">
               Tournament Rules
             </h1>
-            <p>
+            <p className="text-base sm:text-xl">
               Custom round robin- Each participant plays every other participant
               three times for 3 points per win, totalling 9points for winning
               all 3 games against an opponent. maximum points obtainable for
@@ -35,7 +37,7 @@ export default function August2021() {
                 WINNER:{" "}
                 <span className="text-white">{afrobrawlers[2].winner}</span>
               </h1>
-              <div className="relative flex flex-col items-center justify-center">
+              <div className="relative sm:hidden flex flex-col items-center justify-center">
                 <Image
                   src="/podium.webp"
                   width={400}
@@ -52,7 +54,7 @@ export default function August2021() {
                   />
                 </div>
               </div>
-              <div>
+              <div className="text-base sm:text-xl">
                 <h1 className="font-bold text-yellow-600">Participants:</h1>
                 <div className="flex flex-wrap">
                   {afrobrawlers[2].participants.map((item, index) => {
@@ -67,7 +69,7 @@ export default function August2021() {
             </div>
           </div>
           <Link
-            className="text-black w-1/2 sm:w-1/4 rounded-lg bg-white h-10 sm:h-20 flex flex-row items-center justify-center font-bold"
+            className="text-black w-1/2 sm:w-1/4 rounded-lg bg-white h-10 sm:h-14 flex flex-row items-center justify-center font-bold"
             href="/home"
           >
             Back

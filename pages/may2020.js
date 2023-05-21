@@ -17,14 +17,14 @@ export default function May2020() {
       </Head>
       <main>
         <section className="flex flex-col items-center justify-start bg-black text-white text:lg sm:text-3xl w-full min-h-screen gap-5 px-5 py-8">
-          <h1 className="font-bold text-2xl text-white">
+          <h1 className="font-bold text-2xl sm:text-3xl text-white">
             1v1 Double Elimination
           </h1>
           <div>
-            <h1 className="font-bold text-xl text-yellow-600">
+            <h1 className="font-bold text-xl sm:text-2xl text-yellow-600">
               Tournament Rules
             </h1>
-            <p>
+            <p className="text-base sm:text-xl">
               One match per standard bracket, 1 point for a win and 0 point for
               a loss. One match per loser&apos;s bracket, 1 point for a win and
               0 point for a loss. Grand final is a best of three, with 1 point
@@ -36,7 +36,7 @@ export default function May2020() {
                 WINNER:{" "}
                 <span className="text-white">{afrobrawlers[3].winner}</span>
               </h1>
-              <div className="relative flex flex-col items-center justify-center">
+              <div className="relative sm:hidden flex flex-col items-center justify-center">
                 <Image
                   src="/podium.webp"
                   width={400}
@@ -53,7 +53,7 @@ export default function May2020() {
                   />
                 </div>
               </div>
-              <div>
+              <div className="text-base sm:text-xl">
                 <h1 className="font-bold text-yellow-600">Participants:</h1>
                 <div className="flex flex-wrap">
                   {afrobrawlers[3].participants.map((item, index) => {
@@ -68,7 +68,7 @@ export default function May2020() {
             </div>
           </div>
           <Link
-            className="text-black w-1/2 sm:w-1/4 rounded-lg bg-white h-10 sm:h-20 flex flex-row items-center justify-center font-bold"
+            className="text-black w-1/2 sm:w-1/4 rounded-lg bg-white h-10 sm:h-14 flex flex-row items-center justify-center font-bold"
             href="/home"
           >
             Back

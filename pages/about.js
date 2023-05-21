@@ -16,11 +16,11 @@ export default function About() {
       </Head>
       <main>
         <section className="flex flex-col items-center justify-start bg-black text-white text:lg sm:text-3xl w-full min-h-screen gap-5 px-5 py-8">
-          <h1 className="font-bold text-2xl text-yellow-600">
+          <h1 className="font-bold text-2xl sm:text-3xl text-yellow-600">
             About Afrobrawlers
           </h1>
           <div>
-            <p>
+            <p className="text-base sm:text-xl">
               We are Afrobrawlers. We bring together a passionate group of
               Brawlhalla players from Nigeria, Senegal, South Africa, Ghana,
               Sudan, Zimbabwe and beyond. At Afrobrawlers, we believe in the
@@ -28,7 +28,7 @@ export default function About() {
             </p>
             <br />
             <h1 className="font-bold text-xl text-yellow-600">Our Mission</h1>
-            <p>
+            <p className="text-base sm:text-xl">
               Our mission at Afrobrawlers is to create a welcoming and inclusive
               space where gamers from across Africa can connect, learn, and grow
               together. We strive to foster a community that embraces diversity,
@@ -48,7 +48,7 @@ export default function About() {
                     height={100}
                     alt="brawlhalla"
                   />
-                  <p>
+                  <p className="text-base sm:text-xl">
                     <b className="text-green-700">Diverse Community:</b> <br />
                     Our community represents a rich blend of cultures,
                     backgrounds, and experiences.
@@ -64,7 +64,7 @@ export default function About() {
                     height={100}
                     alt="brawlhalla"
                   />
-                  <p>
+                  <p className="text-base sm:text-xl">
                     <b className="text-green-700">Tournaments and Events:</b>{" "}
                     <br />
                     Get ready for regular tournaments where you can showcase
@@ -81,7 +81,7 @@ export default function About() {
                     height={100}
                     alt="brawlhalla"
                   />
-                  <p>
+                  <p className="text-base sm:text-xl">
                     <b className="text-green-700">Skill Development:</b> <br />
                     Whether you&apos;re a beginner seeking guidance or an
                     experienced player looking to polish your techniques, our
@@ -98,7 +98,7 @@ export default function About() {
                     height={100}
                     alt="brawlhalla"
                   />
-                  <p>
+                  <p className="text-base sm:text-xl">
                     <b className="text-green-700">Community Support:</b> <br />
                     We believe in supporting each other not only within the game
                     but also in our personal journeys. Our community is built on
@@ -110,7 +110,7 @@ export default function About() {
             </ul>
             <div className="w-full flex items-center justify-between">
               <Link
-                className="text-black w-1/2 sm:w-1/4 rounded-lg bg-white h-10 sm:h-20 flex flex-row items-center justify-center font-bold"
+                className="text-black w-1/2 sm:w-1/4 rounded-lg bg-white h-10 sm:h-14 flex flex-row items-center justify-center font-bold"
                 href="/home"
               >
                 <b className="text-3xl mr-2">←</b> Go Back
@@ -118,7 +118,7 @@ export default function About() {
 
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="text-black w-1/6 sm:w-1/4 rounded-full bg-white aspect-square flex flex-row items-center justify-center font-bold animate-bounce"
+                className="text-black w-1/6 sm:w-[5%] rounded-full bg-white aspect-square flex flex-row items-center justify-center font-bold animate-bounce"
               >
                 <b className="text-3xl">↑</b>
               </button>
@@ -126,10 +126,10 @@ export default function About() {
             <br />
             <hr />
             <br />
-            <h1 className="font-bold text-xl text-red-600 text-center mb-2">
+            <h1 className="font-bold text-xl sm:text-2xl text-red-600 text-center mb-2">
               DISCLAIMER
             </h1>
-            <p>
+            <p className="text-base sm:text-xl">
               This website is a personal project dedicated to the African
               Brawlhalla Community. I am not officially affiliated with Blue
               Mammoth Games and this website is not the official{" "}
@@ -139,11 +139,11 @@ export default function About() {
                 target="_blank"
               >
                 Brawlhalla Website.
-              </Link>
+              </Link>{" "}
               All Brawlhalla images rendered in this site are legitimate
               properties of BMG
             </p>
-            <i className="text-yellow-600 font-bold">
+            <i className="text-yellow-600 font-bold text-base sm:text-xl">
               - Cifer (Community Moderator)
             </i>
           </div>
