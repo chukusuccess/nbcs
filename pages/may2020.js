@@ -26,9 +26,9 @@ export default function Home() {
             </h1>
             <p>
               One match per standard bracket, 1 point for a win and 0 point for
-              a loss. One match per loser's bracket, 1 point for a win and 0
-              point for a loss. Grand final is a best of three, with 1 point per
-              win and 0 point per loss.
+              a loss. One match per loser&apos;s bracket, 1 point for a win and
+              0 point for a loss. Grand final is a best of three, with 1 point
+              per win and 0 point per loss.
             </p>
             <br />
             <div>
@@ -56,8 +56,12 @@ export default function Home() {
               <div>
                 <h1 className="font-bold text-yellow-600">Participants:</h1>
                 <div className="flex flex-wrap">
-                  {afrobrawlers[4].participants.map((item) => {
-                    return <p className="mr-2">{item},</p>;
+                  {afrobrawlers[4].participants.map((item, index) => {
+                    return (
+                      <p key={index} className="mr-2">
+                        {item},
+                      </p>
+                    );
                   })}
                 </div>
               </div>

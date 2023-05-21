@@ -55,8 +55,12 @@ export default function Home() {
               <div>
                 <h1 className="font-bold text-yellow-600">Participants:</h1>
                 <div className="flex flex-wrap">
-                  {afrobrawlers[3].participants.map((item) => {
-                    return <p className="mr-2">{item},</p>;
+                  {afrobrawlers[3].participants.map((item, index) => {
+                    return (
+                      <p key={index} className="mr-2">
+                        {item},
+                      </p>
+                    );
                   })}
                 </div>
               </div>

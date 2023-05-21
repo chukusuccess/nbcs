@@ -46,6 +46,7 @@ export default function Home() {
                     src="https://static.wikia.nocookie.net/brawlhalla_gamepedia/images/c/ce/Taunt_Solidarity_Still.png/revision/latest/scale-to-width-down/198?cb=20200710144058"
                     width={100}
                     height={100}
+                    alt="brawlhalla"
                   />
                   <p>
                     <b className="text-green-700">Diverse Community:</b> <br />
@@ -61,6 +62,7 @@ export default function Home() {
                     src="https://static.wikia.nocookie.net/brawlhalla_gamepedia/images/9/93/Taunt_Ninja_Flip_Still.png/revision/latest/scale-to-width-down/198?cb=20200710143827"
                     width={100}
                     height={100}
+                    alt="brawlhalla"
                   />
                   <p>
                     <b className="text-green-700">Tournaments and Events:</b>{" "}
@@ -77,12 +79,13 @@ export default function Home() {
                     src="https://static.wikia.nocookie.net/brawlhalla_gamepedia/images/2/29/Taunt_The_Reads_Still.png/revision/latest/scale-to-width-down/198?cb=20200710144307"
                     width={100}
                     height={100}
+                    alt="brawlhalla"
                   />
                   <p>
                     <b className="text-green-700">Skill Development:</b> <br />
-                    Whether you're a beginner seeking guidance or an experienced
-                    player looking to polish your techniques, our community
-                    provides a nurturing space for growth.
+                    Whether you&apos;re a beginner seeking guidance or an
+                    experienced player looking to polish your techniques, our
+                    community provides a nurturing space for growth.
                   </p>
                 </div>
               </li>
@@ -93,6 +96,7 @@ export default function Home() {
                     src="https://static.wikia.nocookie.net/brawlhalla_gamepedia/images/6/67/Taunt_Avatar_Flag_Still.png/revision/latest/scale-to-width-down/198?cb=20200710143237"
                     width={100}
                     height={100}
+                    alt="brawlhalla"
                   />
                   <p>
                     <b className="text-green-700">Community Support:</b> <br />

@@ -70,12 +70,16 @@ export default function Home() {
                   Participants:
                 </h1>
                 <div className="flex flex-wrap">
-                  {afrobrawlers[0].participants.map((item) => {
+                  {afrobrawlers[0].participants.map((item, index) => {
                     return (
-                      <div className="w-1/2 mb-5 text-green-600">
+                      <div key={index} className="w-1/2 mb-5 text-green-600">
                         {item.name}:{" "}
-                        {item.members.map((member) => {
-                          return <p className="text-white">{member.name},</p>;
+                        {item.members.map((member, index) => {
+                          return (
+                            <p key={index} className="text-white">
+                              {member.name},
+                            </p>
+                          );
                         })}
                       </div>
                     );
