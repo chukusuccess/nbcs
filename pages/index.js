@@ -17,8 +17,8 @@ export default function Home() {
       </Head>
       <main>
         <Splash />
-        <section className="flex flex-col items-start justify-center bgimg bg-right sm:bg-center w-full min-h-screen gap-12 xl:gap-10 lg:pt-8">
-          <div className="flex flex-col justify-center items-center sm:items-start w-full px-4 text-black dark:text-white sm:px-20 blurdiv">
+        <section className="flex flex-col items-start justify-center bgimg bg-right sm:bg-center w-full min-h-screen text-white gap-12 xl:gap-10 lg:pt-8">
+          <div className="flex flex-col justify-center items-center sm:items-start w-full px-4 text-white sm:px-20 blurdiv">
             <br />
             <br />
             <h1 className="w-full text-4xl text-center sm:text-left">
@@ -26,7 +26,7 @@ export default function Home() {
               Championship Series
             </h1>
             <br />
-            <p className="w-full max-w-lg text-xl text-center sm:text-left font-thinv">
+            <p className="w-full max-w-lg text-xl text-center sm:text-left font-light">
               Welcome to <b className="font-extrabold">NBCS,</b> join us as we
               dive into the world of <b className="font-bold">Brawlhalla,</b>{" "}
               where every victory is earned through skill, strategy, a touch of
@@ -35,7 +35,7 @@ export default function Home() {
             <div className="flex sm:flex-row flex-col items-start justify-center w-fit gap-4 mt-6 sm:mt-10">
               <Link
                 href="/home"
-                className="flex flex-row items-center justify-center gap-2 p-2 w-64 border border-[#fff] bg-[#2a9988] hover:bg-[#1C665B] dark:bg-black dark:hover:bg-[#1C665B] duration-500 rounded-md text-white text-xl max-w-[250px] text-center"
+                className="flex flex-row items-center justify-center gap-2 p-2 w-64 border border-[#fff] hover:bg-[#1C665B] bg-black duration-500 rounded-md text-white text-xl max-w-[250px] text-center"
               >
                 Explore
                 <Image
