@@ -13,12 +13,12 @@ export default function Offline() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <section className="flex flex-col items-center justify-center w-full h-screen bg-white text-black">
+        <section className="flex flex-col items-center justify-center w-full h-screen bg-black text-white">
           <div className="flex flex-col justify-center items-center px-4 sm:px-20 w-full h-full text-black text-2xl">
             <h1>
-              Oops! It appears you are offline.
+              No network! 😒
               <br />
-              Please turn on your Internet connection.
+              Abeg check your internet connection.
             </h1>
           </div>
         </section>

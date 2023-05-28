@@ -13,6 +13,10 @@ export default function Home() {
           content="Nigerian Brawlhalla Championship Series"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="keywords"
+          content="Brawlhalla, Platform, Game, Tournaments, ESports, Brawl"
+        ></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>

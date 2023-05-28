@@ -268,7 +268,7 @@ export const members = [
   },
   {
     name: "Not-ur-Ex",
-    peak: "2000",
+    peak: "2005",
     rank: "Diamond",
     role: "Community Member",
   },
