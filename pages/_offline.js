@@ -14,7 +14,7 @@ export default function Offline() {
       </Head>
       <main>
         <section className="flex flex-col items-center justify-center w-full h-screen bg-black text-white">
-          <div className="flex flex-col justify-center items-center px-4 sm:px-20 w-full h-full text-black text-2xl">
+          <div className="flex flex-col justify-center items-center px-4 sm:px-20 w-full h-full text-2xl">
             <h1>
               No network! 😒
               <br />
