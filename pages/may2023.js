@@ -38,10 +38,10 @@ export default function May2023() {
             <div className="w-full">
               <h1 className="font-bold text-xl text-green-600 mb-10">
                 WINNER:{" "}
-                <span className="text-white">{afrobrawlers[0].winner}</span>
+                <span className="text-white">{afrobrawlers[1].winner}</span>
               </h1>
               <div className="w-full sm:hidden flex flex-row flex-wrap items-center justify-centerustcen">
-                {afrobrawlers[0].participants[3].members.map((item, index) => (
+                {afrobrawlers[1].participants[3].members.map((item, index) => (
                   <div
                     className="relative w-1/3 flex flex-col items-center justify-center mb-5"
                     key={index}
@@ -53,7 +53,7 @@ export default function May2023() {
                       alt="brawlhalla"
                       className="object-contain overflow-visible h-full"
                     />
-                    <div className="absolute top-0 h-[16vw] w-full flex flex-col items-center justify-start">
+                    <div className="absolute top-0 h-[29%] w-full flex flex-col items-center justify-start">
                       <Image
                         src={item.legend}
                         width={100}
@@ -70,7 +70,7 @@ export default function May2023() {
                   Participants:
                 </h1>
                 <div className="flex flex-wrap">
-                  {afrobrawlers[0].participants.map((item, index) => {
+                  {afrobrawlers[1].participants.map((item, index) => {
                     return (
                       <div key={index} className="w-1/2 mb-5 text-green-600">
                         {item.name}:{" "}

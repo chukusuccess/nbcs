@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { afrobrawlers } from "../components/data/info.js";
 
-export default function May2020() {
+export default function May27th2023() {
   return (
     <>
       <Head>
@@ -25,16 +25,14 @@ export default function May2020() {
               Tournament Rules
             </h1>
             <p className="text-base sm:text-xl">
-              One match per standard bracket, 1 point for a win and 0 point for
-              a loss. One match per loser&apos;s bracket, 1 point for a win and
-              0 point for a loss. Grand final is a best of three, with 1 point
-              per win and 0 point per loss.
+              Best of 3 in standard winners bracket until top 4, then best of 5
+              until a winner emerges. Best of 3 throughout losers bracket.
             </p>
             <br />
             <div>
               <h1 className="font-bold text-xl text-green-600 mb-10">
                 WINNER:{" "}
-                <span className="text-white">{afrobrawlers[4].winner}</span>
+                <span className="text-white">{afrobrawlers[0].winner}</span>
               </h1>
               <div className="relative sm:hidden flex flex-col items-center justify-center">
                 <Image
@@ -43,9 +41,9 @@ export default function May2020() {
                   height={100}
                   alt="brawlhalla"
                 />
-                <div className="absolute top-0 h-[28.5%] w-full flex flex-col items-center justify-start">
+                <div className="absolute top-0 h-1/3 w-full flex flex-col items-center justify-start">
                   <Image
-                    src="https://static.wikia.nocookie.net/brawlhalla_gamepedia/images/3/38/Ember.png/revision/latest/scale-to-width-down/1000?cb=20210315013318"
+                    src="https://static.wikia.nocookie.net/brawlhalla_gamepedia/images/e/ea/Queen_Nai.png/revision/latest/scale-to-width-down/1000?cb=20210315015342"
                     width={1000}
                     height={1000}
                     alt="brawlhalla"
@@ -56,7 +54,7 @@ export default function May2020() {
               <div className="text-base sm:text-xl">
                 <h1 className="font-bold text-yellow-600">Participants:</h1>
                 <div className="flex flex-wrap">
-                  {afrobrawlers[4].participants.map((item, index) => {
+                  {afrobrawlers[0].participants.map((item, index) => {
                     return (
                       <p key={index} className="mr-2">
                         {item},

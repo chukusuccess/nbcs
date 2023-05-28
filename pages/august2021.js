@@ -35,7 +35,7 @@ export default function August2021() {
             <div>
               <h1 className="font-bold text-xl text-green-600 mb-10">
                 WINNER:{" "}
-                <span className="text-white">{afrobrawlers[2].winner}</span>
+                <span className="text-white">{afrobrawlers[3].winner}</span>
               </h1>
               <div className="relative sm:hidden flex flex-col items-center justify-center">
                 <Image
@@ -44,7 +44,7 @@ export default function August2021() {
                   height={100}
                   alt="brawlhalla"
                 />
-                <div className="absolute top-0 h-[55vw] w-full flex flex-col items-center justify-start">
+                <div className="absolute top-0 h-[28.5%] w-full flex flex-col items-center justify-start">
                   <Image
                     src="https://static.wikia.nocookie.net/brawlhalla_gamepedia/images/5/5f/Diana.png/revision/latest?cb=20210315013123"
                     width={1000}
@@ -57,7 +57,7 @@ export default function August2021() {
               <div className="text-base sm:text-xl">
                 <h1 className="font-bold text-yellow-600">Participants:</h1>
                 <div className="flex flex-wrap">
-                  {afrobrawlers[2].participants.map((item, index) => {
+                  {afrobrawlers[3].participants.map((item, index) => {
                     return (
                       <p key={index} className="mr-2">
                         {item},
