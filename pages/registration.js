@@ -1,7 +1,7 @@
-import Head from "next/head";
 import { useState } from "react";
+import Head from "next/head";
 
-export default function registrationPage() {
+export default function RegistrationPage() {
   const [username, setUsername] = useState("");
   const [bhid, setBhid] = useState("");
   const [password, setPassword] = useState("");
