@@ -75,10 +75,10 @@ export default function Home() {
                   );
                 })}
               </div>
-              <div className="w-full hidden sm:flex flex-row items-center justify-center flex-wrap sm:h-[450px] gap-[5%]">
+              <div className="w-full hidden sm:flex flex-row items-start justify-start flex-wrap sm:h-[450px] gap-[2%]">
                 {afrobrawlers.map((item, index) => {
                   return (
-                    <div key={index} className="w-[45%]">
+                    <div key={index} className="w-[22.5%] truncate">
                       <TournamentCard
                         title={item.tournamentTitle}
                         host={item.Host}
