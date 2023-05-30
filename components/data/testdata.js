@@ -2198,7 +2198,7 @@ export const apiRanked = {
     }
 }
 
-export const brwlhallaApi = axios.create({ baseURL: "https://brawlhalla.fly.dev/v1" });
+export const brawlhallaApi = axios.create({ baseURL: "https://brawlhalla.fly.dev/v1" });
 
 export const dbName = "nbcs-database";
 
