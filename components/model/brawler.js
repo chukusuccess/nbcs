@@ -1,4 +1,4 @@
-class Brawler {
+export default class Brawler {
     constructor() {
       this.brawlhalla_id = 0;
       this.name = "";

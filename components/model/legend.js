@@ -1,4 +1,4 @@
-class Legend {
+export default class Legend {
     constructor() {
       this.legend_id = 0;
       this.legend_name_key = "";
