@@ -24,15 +24,3 @@ const nextConfig = {
 };
 
 module.exports = withPWA(nextConfig);
-
-// next.config.js
-module.exports = {
-  async rewrites() {
-      return [
-        {
-          source: '/v1*',
-          destination: 'https://brawlhalla.fly.dev/:*',
-        },
-      ]
-    },
-};
