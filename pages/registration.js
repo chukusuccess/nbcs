@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
+import { userExample } from "@/components/data/info";
+import { bhids } from "@/components/data/testdata";
 
 export default function RegistrationPage() {
   const [username, setUsername] = useState("");
@@ -10,9 +12,11 @@ export default function RegistrationPage() {
     e.preventDefault();
     const data = { username: username, bhid: bhid, password: password };
 
-    fetch(`https://brawlhalla.fly.dev/v1/stats/id?brawlhalla_id=${data.bhid}`)
+    const url = 'https://corsproxy.io/?' + encodeURIComponent(`https://brawlhalla.fly.dev/v1/stats/id?brawlhalla_id=${data.bhid}`);
+
+    fetch(url)
       .then( (response) => {
-        console.log(response)
+        console.log(userExample.data.name)
         return response;
       })
     console.log(data.bhid);
