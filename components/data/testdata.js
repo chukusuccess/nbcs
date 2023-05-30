@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const bhids = [8013764, 3532085]
 
 export const apiStats = {
@@ -2195,6 +2197,8 @@ export const apiRanked = {
         "lastSynced": 1685364625089
     }
 }
+
+export const brwlhallaApi = axios.create({ baseURL: "https://brawlhalla.fly.dev/v1" });
 
 export const dbName = "nbcs-database";
 
