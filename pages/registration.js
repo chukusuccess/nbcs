@@ -1,25 +1,21 @@
 import { useState } from "react";
+import { useRouter } from 'next/router';
 import Head from "next/head";
 import { userExample } from "@/components/data/info";
-import { bhids } from "@/components/data/testdata";
 
 export default function RegistrationPage() {
+
+  const router = useRouter();
+
   const [username, setUsername] = useState("");
   const [bhid, setBhid] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleclick = (e) => {
-    e.preventDefault();
-    const data = { username: username, bhid: bhid, password: password };
-
-    const url = 'https://corsproxy.io/?' + encodeURIComponent(`https://brawlhalla.fly.dev/v1/stats/id?brawlhalla_id=${data.bhid}`);
-
-    fetch(url)
-      .then( (response) => {
-        console.log(userExample.data.name)
-        return response;
-      })
-    console.log(data.bhid);
+  const handleClick = () => {
+    const data = bhid;
+    console.log(data, "data")
+    router.push(`/profile?param1=${data}`);
+    localStorage.setItem("nd", JSON.stringify({name: "dixit", bhid: bhid}))
   };
 
   return (
@@ -52,7 +48,7 @@ export default function RegistrationPage() {
               <div className="flex flex-col w-full items-center gap-2">
                 <label htmlFor="bhid">Brawlhalla ID:</label>
                 <input
-                  type="text"
+                  type="number"
                   id="bhid"
                   name="bhid"
                   className="w-full h-16 rounded-xl text-xl sm:w-1/3"
@@ -74,7 +70,7 @@ export default function RegistrationPage() {
 
               <button
                 className="w-full sm:w-1/3 h-16 rounded-xl bg-yellow-500"
-                onClick={(e) => handleclick(e)}
+                onClick={() => handleClick()}
               >
                 Register
               </button>

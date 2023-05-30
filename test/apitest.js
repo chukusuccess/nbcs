@@ -1,6 +1,5 @@
 import axios from "axios";
 import axiosRetry from 'axios-retry';
-import { stringify } from "postcss";
 
 let promises = [];
 let names = [];
@@ -12,7 +11,7 @@ axiosRetry(axios, { retryDelay: axiosRetry.exponentialDelay });
 
 let brawlhallaApi = axios.create({ baseURL: "https://brawlhalla.fly.dev/v1" });
 
-function GetDataByBhid(id, output) {
+function GetDataByBhid(id) {
 
 	let brawlhallaApi = axios.create({ baseURL: "https://brawlhalla.fly.dev/v1" });
 
@@ -31,7 +30,7 @@ function GetDataByBhid(id, output) {
 
 // axiosRetry(axios, { retryDelay: axiosRetry.exponentialDelay });
 
-for (var i = 0; i < 2; i++) {
+for (var i = 0; i < 1; i++) {
     // ID: 3532085
     promises.push(GetDataByBhid(3532085 + i));
 };
