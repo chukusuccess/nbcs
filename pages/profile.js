@@ -3,45 +3,40 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import User from "../components/model/user";
 import { BhApiService } from "../components/tools/tools";
+import { Grid, Container, Card, Row, Text, Col, Spacer } from "@nextui-org/react";
+import { color } from "framer-motion";
 
 export default function Profile() {
-  const currentUser = new User("Dixit", 3532085, "sn");
 
   const [stats, setStats] = useState(null);
   const [ranked, setRanked] = useState(null);
-  const [a, setA] = useState({});
 
   const router = useRouter();
-  const bhid = router.query.param1;
+  var bhid = router.query.bhid;
+
+  console.log(router.query, "Router");
 
   useEffect(() => {
-    let test = JSON.parse(localStorage.getItem("nd"));
-    setA(test);
-    console.log(a, "fezfz");
-
     const getData = async () => {
-      // put the brawlhalla functions here but as arrow functions
-
-      const statResponse = await BhApiService.GetDataByBhid(
-        router.query.param1
+      console.log(router.query, "getData")
+      const statResponse = await BhApiService.getStatsByBhid(
+        router.query["bhid"]
       );
-      const rankedResponse = await BhApiService.GetRankedDataByBhid(
-        router.query.param1
+      const rankedResponse = await BhApiService.getRankedDataByBhid(
+        router.query["bhid"]
       );
 
       setStats(statResponse.data);
       setRanked(rankedResponse.data);
-
-      console.log(statResponse.data.name, "the response");
-      console.log(rankedResponse.data.data.rating);
-      console.log(router.query.param1, "router");
     };
 
-    getData();
+    if (router.isReady) {
+      getData();
+      console.log(ranked?.data?.tier)
+      console.log(router.query);
+    }
 
-    // BhApiService.GetDataByBhid(userInstance.bhid).then(response => userInstance.stats = response).then(response => {console.log(response.name)}),
-    // BhApiService.GetRankedDataByBhid(userInstance.bhid).then(response => userInstance.ranked = response).then(response => {console.log(response.tier)})
-  }, []);
+  }, [router.isReady]);
 
   return (
     <>
@@ -55,30 +50,87 @@ export default function Profile() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <section className="flex flex-col items-center justify-start text:lg sm:text-3xl w-full min-h-screen gap-5 px-5 py-8">
-          <div className="flex flex-col w-full items-center gap-2">
-            <label htmlFor="usrname">Username :</label>
-            <p id="usrname" className="flex flex-col w-full items-center gap-2">
-              {a?.bhid}
-            </p>
-          </div>
+        <section>
+          <Container>
+            <Grid.Container gap={2} justify="center">
+              <Row gap={1}>
+                <Col>
+                  <Card css={{ bg: "" }} isHoverable >
+                    <Card.Header>
+                      <Text weight={"bold"} >Brawlhalla ID</Text>
+                    </Card.Header>
+                    <Card.Divider css={{ bg: "linear-gradient(245deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)" }} />
 
-          <div className="flex flex-col w-full items-center gap-2">
-            <label htmlFor="bhname">In game name :</label>
-            <p id="bhname" className="flex flex-col w-full items-center gap-2">
-              {stats?.name}
-            </p>
-          </div>
+                    <Card.Body>
+                      <Row justify="center" align="center">
+                        <Text size="$3xl" weight={"bold"} css={{ textGradient: "45deg, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%" }}>{stats?.brawlhalla_id ? stats.brawlhalla_id : "N/A"}</Text>
+                      </Row>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card isHoverable>
+                    <Card.Header>
+                      <Text weight={"bold"}>Username</Text>
+                    </Card.Header>
+                    <Card.Divider css={{ bg: "linear-gradient(245deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)" }} />
 
-          <div className="flex flex-col w-full items-center gap-2">
-            <label htmlFor="rating">Current Rating :</label>
-            <p
-              id="rating"
-              className="flex flex-col w-full items-center gap-2 bg-blue-500"
-            >
-              {ranked?.data.rating}
-            </p>
-          </div>
+                    <Card.Body>
+                      <Row justify="center" align="center">
+                        <Text size="$3xl" weight={"bold"} css={{ textGradient: "-45deg, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%" }}>{stats?.name ? stats.name : "N/A"}</Text>
+                      </Row>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+              <Spacer y={1} />
+              <Row gap={1}>
+                <Col>
+                  <Card isHoverable>
+                    <Card.Header>
+                      <Text weight={"bold"}>Current Rating</Text>
+                    </Card.Header>
+                    <Card.Divider css={{ bg: "linear-gradient(90deg, rgba(130,231,234,1) 0%, rgba(106,121,234,1) 100%)" }} />
+                    <Card.Body>
+                      <Row justify="center" align="center">
+                        <Text size="$3xl" weight={"bold"} css={{ textGradient: "-45deg, $blue600 -20%, $blue500 60%" }}>{ranked?.data?.rating ? ranked.data.rating : "N/A"}</Text>
+                      </Row>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card isHoverable>
+                    <Card.Header>
+                      <Text weight={"bold"}>Peak Rating</Text>
+                    </Card.Header>
+                    <Card.Divider css={{ bg: "linear-gradient(90deg, rgba(130,231,234,1) 0%, rgba(106,121,234,1) 100%)" }} />
+
+                    <Card.Body>
+                      <Row justify="center" align="center">
+                        <Text size="$3xl" weight={"bold"} css={{ textGradient: "45deg, $blue600 -20%, $blue500 60%" }}>{ranked?.data?.peak_rating ? ranked.data.peak_rating : "N/A"}</Text>
+                      </Row>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card isHoverable>
+                    <Card.Header>
+                      <Text weight={"bold"}>Tier</Text>
+                    </Card.Header>
+                    <Card.Divider css={{ bg: "linear-gradient(90deg, rgba(130,231,234,1) 0%, rgba(106,121,234,1) 100%)" }} />
+
+                    <Card.Body>
+                      <Row justify="center" align="center">
+                        <Text size="$3xl" weight={"bold"} css={{ textGradient: "90deg, $blue600 -20%, $blue500 60%" }}>
+                          {ranked?.data?.tier ? ranked.data.tier : "N/A"}
+                        </Text>
+                      </Row>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+            </Grid.Container>
+          </Container>
         </section>
       </main>
     </>

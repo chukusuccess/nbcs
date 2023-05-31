@@ -10,13 +10,13 @@ const brawlhallaApi = axios.create({
 });
 
 export class BhApiService {
-  static async GetDataByBhid(id) {
+  static async getStatsByBhid(id) {
     const { data } = await brawlhallaApi.get(`/stats/id?brawlhalla_id=${id}`);
 
     return data;
   }
 
-  static async GetRankedDataByBhid(id) {
+  static async getRankedDataByBhid(id) {
     return brawlhallaApi.get(`ranked/id?brawlhalla_id=${id}`);
   }
 }
