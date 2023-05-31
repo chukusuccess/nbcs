@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import User from "../components/model/user";
 import { BhApiService } from "../components/tools/tools";
 import { Grid, Container, Card, Row, Text, Col, Spacer } from "@nextui-org/react";
-import { color } from "framer-motion";
 
 export default function Profile() {
 
@@ -12,13 +10,9 @@ export default function Profile() {
   const [ranked, setRanked] = useState(null);
 
   const router = useRouter();
-  var bhid = router.query.bhid;
-
-  console.log(router.query, "Router");
 
   useEffect(() => {
     const getData = async () => {
-      console.log(router.query, "getData")
       const statResponse = await BhApiService.getStatsByBhid(
         router.query["bhid"]
       );
@@ -32,8 +26,6 @@ export default function Profile() {
 
     if (router.isReady) {
       getData();
-      console.log(ranked?.data?.tier)
-      console.log(router.query);
     }
 
   }, [router.isReady]);
